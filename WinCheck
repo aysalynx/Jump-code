@@ -1,0 +1,15 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class PlayerFall : MonoBehaviour
+{
+    public float fallThreshold = -10f; 
+
+    void Update()
+    {
+        if (transform.position.y < fallThreshold)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+}
